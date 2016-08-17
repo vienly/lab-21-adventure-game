@@ -1,4 +1,4 @@
-![cf](https://i.imgur.com/7v5ASc8.png) lab 20 testing controllers
+![cf](https://i.imgur.com/7v5ASc8.png) lab 21 adventure game
 ======
 
 # To Submit this Assignment
@@ -57,8 +57,5 @@ For this assignment you'll be creating a text based adventure game.
 # Test
 * Unit test 4 Controller Methods that chage the state of the scope
 
-# Test
-* write a test for both the createMonster and createPlayer functions
-
 # Bonus
-* *1pt* use ng-repeat to populate a select menu
+* **1pt** use random numbers to create a chance for your interactions to happen in every room.
