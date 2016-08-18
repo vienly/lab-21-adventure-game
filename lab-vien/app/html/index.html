@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="adventureGame">
+  <head>
+    <title>basic adventure game</title>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" href="bundle.css">
+  </head>
+  <body>
+    <main ng-controller="GameController as gameCtrl">
+      <h1>Welcome to the adventures of James Moon</h1>
+
+      <form novalidate name="gamePadForm" ng-hide="gameCtrl.dead">
+        <label for="direction" ng-hide="gameCtrl.monsterBattle">Direction</label>
+        <select name="direction" ng-model="gamePadForm.direction" ng-hide="gameCtrl.monsterBattle">
+          <option
+          ng-init="gamePadForm.direction = gameCtrl.directions[0]"
+          ng-repeat="direction in gameCtrl.directions"
+          value="{{ direction }}">{{ direction }}
+          </option>
+        </select>
+
+        <br />
+
+        <label for="fightFlight" ng-show="gameCtrl.monsterBattle">Fighting button idk</label>
+        <select name="fightFlight" ng-model="gamePadForm.fightFlight" ng-show="gameCtrl.monsterBattle">
+          <option
+          ng-init="gamePadForm.fightFlight = fight"
+          ng-repeat="option in gameCtrl.fightFlight"
+          value="{{ option }}">{{ option }}
+          </option>
+        </select>
+
+        <button type="button" ng-click="gameCtrl.fight(gamePadForm.fightFlight)" ng-show="gameCtrl.monsterBattle">Fight?</button>
+
+        <button type="button" ng-click="gameCtrl.moveDirection(gamePadForm.direction)" ng-hide="gameCtrl.monsterBattle">Move!</button>
+      </form>
+
+      <ol>
+        <!-- track by explicitly specifies which part of the object is unique within the array -->
+        <li ng-repeat="item in gameCtrl.history track by item.logNo" value="{{ item.text }}">{{ item.text }}</li>
+      </ol>
+
+      <h2 ng-show="gameCtrl.dead">you died</h2>
+
+    </main>
+  </body>
+</html>
