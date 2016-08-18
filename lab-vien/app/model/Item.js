@@ -91,7 +91,7 @@ Item.prototype.generateStats = function(rareChance, mythicalChance, legendaryCha
 };
 
 function getRandomItemFrom(itemArr) {
-  return itemArr[getRandomIntInclusive(0, itemArr.length - 1)]
+  return itemArr[getRandomIntInclusive(0, itemArr.length - 1)];
 }
 
 module.exports = Item;

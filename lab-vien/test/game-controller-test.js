@@ -18,7 +18,6 @@ describe('testing GameController', function() {
   });
 
   it('should contain a new player with no items yet', () => {
-    // this.gameCtrl.moveDirection('right');
     expect(this.gameCtrl.player.hp).toBe(100);
     expect(this.gameCtrl.player.damage).toBe(10);
     expect(this.gameCtrl.player.armor).toBe(10);
