@@ -2,4 +2,3 @@
 **/vendor/*
 **/*.min.js
 **/build/*
-**/test/*
